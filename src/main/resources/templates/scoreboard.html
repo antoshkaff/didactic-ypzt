@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Didactic | Рейтинг</title>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/score.css">
+</head>
+<body>
+	<div class="container">
+			<div class="score-title">
+				<h1>РЕЙТИНГ МАТЕМАТИКА</h1>
+			</div>
+	  	<div class="score-container">
+		<table>
+		        <tr>
+		            <th>ПІБ</th>
+		            <th>Кількість балів</th>
+		        </tr>
+		        <tr th:each="result : ${results}">
+		            <td th:text="${result.user.name}"></td>
+		            <td th:text="${result.totalCorrect}"></td> </tr>
+		    </table>
+    	</div>
+		<button type="button" class="btn-plan" onclick="location.href='/individual-plan';">ПЛАН НАВЧАННЯ</button>
+  	</div>
+
+	<footer>
+	      <div class="footer-didactic">
+	          <h1>DIDACTIC</h1>
+	          <p>Штучний інтелект для підготовки до НМТ</p>
+	      </div>
+	      <div class="footer-contacts">
+	          <p>didactic@gmail.com</p>
+	          <p>+38 (097) 123 12 12</p>
+	          <a href="#">Публічна оферта</a>
+	      </div>
+	 </footer>
+</body>
+</html>

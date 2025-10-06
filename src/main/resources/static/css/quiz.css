@@ -1,0 +1,228 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+p, a, h1, button, input{
+    font-family: "Montserrat", sans-serif;
+}
+.math{
+	color: #4D4747;
+	margin-top: 92px;
+
+}
+.main-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 30px;
+}
+html{
+    scroll-behavior: smooth;
+	background: linear-gradient(#FFE0A8 5%, #FFCF78 87%);
+}
+
+p, a, h1, button, input{
+    font-family: "Montserrat", sans-serif;
+}
+
+.question {
+	width: 90%;
+	max-width: 636px;
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 12px 38px 22px 38px;
+	font-weight: 500;
+	font-size: 16px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 25%);
+}
+.question h1{
+	font-weight: 600;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 25px;
+}
+.answer p{
+	font-size: 13px;
+	margin: 25px 0 12px 0;
+}
+
+
+.answer-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 29px; 
+	justify-content: center;
+}
+
+.answer-element input[type="radio"] {
+    display: none;
+}
+
+.answer-element label {
+    display: inline-block;
+    padding: 12px 50px;
+    border-radius: 20px; 
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: all 0.3s ease; 
+    text-align: center;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 25%);
+	font-family: "Montserrat", sans-serif;
+}
+
+
+.answer-element input[type="radio"]:checked + label {
+    background-color: #FFD667; 
+	box-shadow: 0 0 12px #F0B64D;
+}
+
+
+.answer-element label:hover {
+    background-color: #F5F5F5; 
+}
+
+table, td, th {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    padding: 10px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
+	margin: 20px 0 20px 0;
+}
+
+.question-element{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+img {
+	margin: 20px 0 20px 0;
+}
+.submit-element{
+	background-color: #FD7676;
+	color: #fff;
+	padding: 13px 90px 13px 90px;
+	border: none;
+	font-size: 15px;
+	font-weight: 700;
+	border-radius: 20px;
+	margin-bottom: 100px;
+	text-transform: uppercase;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 25%);
+	transition: all 0.3s ease; 
+}
+.submit-element:hover{
+	box-shadow: 0 0 10px #FD7676;
+	cursor: pointer;
+}
+.submit-element:active{
+	background-color: #D75656;
+	box-shadow: 0 0 10px #D75656;
+}
+
+
+.container-modal-error {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Скрыто по умолчанию */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Поверх всех элементов */
+}
+
+.modal-error{
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 16px 51px 26px 51px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #4D4747;
+	font-size: 20px;
+	z-index: 1010;
+	
+}
+.modal-error h1{
+	text-align: center;
+	font-weight: 700;
+	font-size: 32px;
+}
+
+.modal-error hr{
+	width: 100%;
+	margin: 17px 0 22px 0;
+}
+
+.text-container{
+	text-align: center;
+	font-weight: 500;
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.btn-modal{
+    min-width: 150px;
+	width: 30%;
+    height: 30px;
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(48deg, #FDB638, #FFCF75);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 15%);
+    transition: all 0.3s;
+    margin-top: 33px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn-modal:hover{
+    box-shadow: 0 3px 10px #FDB638;	
+}
+.error-que { 
+	margin-top: 17px;
+	font-size: 16px;
+	color: #BE2222; 
+	text-align: center;
+}
+
+input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+	margin-top: 10px;
+	border-radius: 25px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.name-container {
+	width: 90%;
+	max-width: 636px;
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 12px 38px 22px 38px;
+	font-weight: 500;
+	font-size: 16px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 25%);
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+

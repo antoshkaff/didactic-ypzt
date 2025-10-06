@@ -1,0 +1,119 @@
+header{
+    background-color: #D27344;
+    color: #fff;
+    padding: 10px 71px 10px 71px;
+    font-size: 18px;
+    font-weight: 600;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo{
+    font-family: "Montserrat Subrayada", sans-serif;
+    font-size: 32px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.logo:hover{
+    color: #F9E6CB;
+}
+
+header a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav{
+    display: flex;
+    column-gap: 55px;
+}
+
+nav a{
+    transition: all 0.3s;
+}
+.auth{
+    display: flex;
+    column-gap: 15px;
+}
+.auth a{
+    transition: all 0.3s;
+}
+
+nav a:hover{
+    color: #F9E6CB;
+}
+
+.auth a:hover{
+    color: #F9E6CB;
+}
+
+@media (max-width: 1160px){
+    nav {
+        column-gap: 30px;
+    }
+}
+
+@media (max-width: 1065px){
+    nav {
+        column-gap: 15px;
+    }
+}
+
+@media (max-width: 940px){
+    header {
+        padding: 10px 30px 10px 30px;
+    }
+}
+
+@media (max-width: 840px){
+    nav a {
+        font-size: 14px;
+    }
+    .auth a {
+        font-size: 14px;
+    }
+    .logo {
+        font-size: 24px;
+    }
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFF;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: transparent; 
+    transition: text-decoration-color 0.3s ease, transform 0.3s ease;
+}
+
+
+nav a, .auth a, logo {
+    position: relative;
+    color: #FFF;
+    text-decoration: none;
+   
+}
+
+nav a::after, .auth a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #FFCF78;
+    transition: width 0.3s ease;
+}
+
+nav a:hover, .auth a:hover {
+    color: #FFF1DC;
+}
+
+nav a:hover::after, .auth a:hover::after  {
+    width: 100%; 
+}

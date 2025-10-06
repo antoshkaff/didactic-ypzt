@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+p, a, h1, button, input{
+    font-family: "Montserrat", sans-serif;
+}
+body{
+    background: linear-gradient(-62deg, #FFCF78, #FFE2AE);
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form{
+    background-color: #fff;
+    border-radius: 80px;
+    padding: 26px 50px 45px 50px;
+    font-weight: 500;
+}
+.login-form form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 304px;
+}
+.login-form h1{
+    text-align: center;
+    background-image: linear-gradient(0deg, #D27344 5%, #D4A752 85%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.login-form a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 13px;
+    color: #848484;
+    transition: all 0.3s;
+}
+.login-form a:hover{
+    color: #545454;
+}
+
+.login-form input{
+    width: 300px;
+    height: 39px;
+    background-color: #FDFDFD;
+    border-radius: 25px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.error-message{
+    color: #ED7D7D;
+    display: none;
+    margin-top: 5px;
+}
+
+.btn-login{
+    width: 300px;
+    height: 39px;
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(48deg, #FDB638, #FFCF75);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 15%);
+    transition: all 0.3s;
+    margin-top: 5px;
+}
+.btn-login:hover{
+    box-shadow: 0 3px 10px #FDB638;
+}
+
+.input-login{
+    margin-top: 38px;
+}
+.input-login, .input-password{
+    position: relative;
+}
+
+input{
+    padding: 0 20px 0 36px;
+    font-weight: 500;
+    font-size: 15px;
+}
+i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 19px;
+}
+
+@media (max-width: 1024px) {
+    .login-form {
+        transform: scale(1.2);
+    }
+}
+@media (max-width: 510px) {
+    .login-form {
+        transform: scale(0.9);
+        padding: 26px 40px 45px 40px;
+    }
+}
+
+@media (max-width: 350px) {
+    .login-form {
+        transform: scale(0.8);
+        padding: 26px 30px 45px 30px;
+    }
+}
+@media (max-height: 500px) {
+    .login-form {
+        transform: scale(1);
+    }
+}
+@media (max-height: 410px){
+    .login-form {
+        transform: scale(0.9);
+    }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head xmlns:th="https://www.thymeleaf.org">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Didactic | Початковий Тест ст1</title>
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+	<header>
+	  <a href="index.html#start" class="logo">DIDACTIC</a>
+	  <nav>
+	    <a href="index.html#about-us">Про нас</a>
+	    <a href="index.html#how-works">Як працює</a>
+	    <a href="#">Тарифи</a>
+	    <a href="AI.html">ШІ</a>
+	  </nav>
+	  <div class="auth">
+	    <a href="login.html">Вхід</a>
+	    <a href="registration.html">Реєстрація</a>
+	  </div>
+	</header>
+	
+<form th:action="@{submitQuestions}" method="POST" class="main-container">
+	<h1 class="math">МАТЕМАТИКА</h1>
+
+    <div class="question" th:each="question, iStat : ${questionForm.questions}">
+		<h1 th:text="'№' + ${iStat.count}">№1</h1> <div class="question-element">
+            <p th:text="${question.questionText}"></p> </div>
+        <div class="answer">
+			<p>Оберіть відповідь:</p>
+			<div class="answer-container">
+            <div class="answer-element">
+                <input type="radio" th:id="${'q' + iStat.index + 'a'}" 
+                       th:name="${'questions[' + iStat.index + '].userChoice'}" 
+                       th:value="${question.optionA}">
+                <label class="answer-text" th:for="${'q' + iStat.index + 'a'}" th:text="${'А: ' + question.optionA}"></label>
+            </div>
+            
+            <div class="answer-element">
+                <input type="radio" th:id="${'q' + iStat.index + 'b'}" 
+                       th:name="${'questions[' + iStat.index + '].userChoice'}" 
+                       th:value="${question.optionB}">
+                <label class="answer-text" th:for="${'q' + iStat.index + 'b'}" th:text="${'Б: ' + question.optionB}"></label>
+            </div>
+            
+            <div class="answer-element">
+                <input type="radio" th:id="${'q' + iStat.index + 'v'}" 
+                       th:name="${'questions[' + iStat.index + '].userChoice'}" 
+                       th:value="${question.optionC}">
+                <label class="answer-text" th:for="${'q' + iStat.index + 'v'}" th:text="${'В: ' + question.optionC}"></label>
+            </div>
+            
+            <div class="answer-element">
+                <input type="radio" th:id="${'q' + iStat.index + 'g'}" 
+                       th:name="${'questions[' + iStat.index + '].userChoice'}" 
+                       th:value="${question.optionD}">
+                <label class="answer-text" th:for="${'q' + iStat.index + 'g'}" th:text="${'Г: ' + question.optionD}"></label>
+            </div>
+            
+            <div class="answer-element">
+                <input type="radio" th:id="${'q' + iStat.index + 'd'}" 
+                       th:name="${'questions[' + iStat.index + '].userChoice'}" 
+                       th:value="${question.optionE}">
+                <label class="answer-text" th:for="${'q' + iStat.index + 'd'}" th:text="${'Д: ' + question.optionE}"></label>
+            </div>
+            </div>
+             <input type="hidden" th:name="${'questions[' + iStat.index + '].questionId'}" th:value="${question.questionId}">
+        </div>
+    </div>
+    
+    <div class="submit">
+    	<button type="submit" class="submit-element">Завершити</button>
+	</div>
+</form>
+
+<div class="container-modal-error" style="display: none;">
+	<div class="modal-error">
+		<h1>Йой</h1>
+		<hr>
+		<div class="text-container">
+		<p>Що б завершити тест, ти маєш дати відповіді на всі питання!</p>
+			<div class="error-que">
+				<p>Питання №4</p>
+				<p>Питання №2</p>
+			</div>
+		</div>
+		<hr>
+		<button type="submit" class="btn-modal">ДОБРЕ</button>
+	</div>
+</div>
+
+<footer>
+    <div class="footer-didactic">
+        <h1>DIDACTIC</h1>
+        <p>Штучний інтелект для підготовки до НМТ</p>
+    </div>
+    <div class="footer-contacts">
+        <p>didactic@gmail.com</p>
+        <p>+38 (097) 123 12 12</p>
+        <a href="#">Публічна оферта</a>
+    </div>
+</footer>
+
+    <script src="script/quiz.js"></script>
+    <script src="script/App/App.js" type="module"></script>
+</body>
+</html>

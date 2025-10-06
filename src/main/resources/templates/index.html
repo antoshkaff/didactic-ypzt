@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head 	xmlns="http://www.w3.org/1999/xhtml"
+	    xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Didactic | Головна</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <script src="../static/script/App/App.js"></script>
+</head>
+<body>
+<header>
+    <a href="#start" class="logo">DIDACTIC</a>
+    <nav>
+        <a href="#about-us">Про нас</a>
+        <a href="#how-works">Як працює</a>
+        <a href="#tariff">Тарифи</a>
+        <a th:href="@{AI.html}">ШІ</a>
+    </nav>
+    <div class="auth">
+        <a th:href="@{login.html}">Вхід</a>
+        <a th:href="@{registration.html}">Реєстрація</a>
+    </div>
+</header>
+
+<div class="start-container" id="start">
+    <div class="start-content">
+        <h1 class="centred">Підготуйся до НМТ <br> разом з DIDACTIC</h1>
+        <div class="start-text-container">
+            <p class="centred">Твій успіх на НМТ починається тут!</p>
+            <p class="centred">Тому готуйся з нами на 200 балів без напрягів</p>
+        </div>
+        <button class="button-start" onclick="location.href='/AI.html';">ПОЧАТИ ЗАРАЗ</button>
+    </div>
+	
+    <img th:src="@{img/divider1.png}" class="divider-1">
+</div>
+
+
+<div class="about-us-container">
+    <h1 id="about-us">Про нас</h1>
+    <div class="rectangle-container">
+
+        <div class="rectangle ai">
+            <img th:src="@{img/icons/ai.svg}">
+            <p><span class="large">М</span>и використовуємо штучний інтелект, щоб допомогти вам підготуватися до НМТ ефективніше та зручніше.</p>
+        </div>
+        <div class="rectangle adaptive">
+            <img th:src="@{img/icons/adaptive.svg}">
+            <p><span class="large">Н</span>аші програми адаптуються під ваші потреби, слабкі та сильні сторони, щоб ви отримали максимальний результат.</p>
+        </div>
+        <div class="rectangle cross">
+            <img th:src="@{img/icons/cross.svg}">
+            <p><span class="large">П</span>латформа доступна у будь-який час і в будь-якому місці – навчайтеся там, де вам зручно.</p>
+        </div>
+    </div>
+</div>
+<img th:src="@{img/divider2.png}" class="divider-2">
+
+<div class="how-works-container">
+    <h1 id="how-works">Як працює</h1>
+    <div class="algorithm-steps">
+        <p>Заходишь на сайт і проходишь реєстрацію</p>
+		<p>Обираєшь план підписки</p>
+        <p>Переходишь до вкладки ШІ і обираєшь предмет для навчання</p>
+        <p>Проходишь вступний тест</p>
+        <p>Отримуєшь план навчання для вибраного предмету</p>
+        <p>Навчаєшься за індивідуально-створеним планом з допомогою AI репетитора</p>
+		<p>Проходишь НМТ</p>
+		<p>Поступаєшь до лучших ЗВО України, все просто!</p>
+    </div>
+</div>
+
+<div class="tariff-container">
+    <h1 id="tariff">Тарифи</h1>
+	<div class="tariffs">
+		<div class="free-tariff">
+			<h1>Безкоштовний тариф</h1>
+			<ul>
+				<li>Відкрит тільки перший модуль</li>
+				<li>Штучний інтелект обмежений у використанні</li>
+				<li>Не можна обирати вибіркові дісципліни</li>
+			</ul>
+			<div>
+				<p>Ціна: Безкоштовно</p>
+				<button class="tariff-btn" onclick="location.href='/#';">ОБРАТИ</button>
+			</div>
+		</div>
+	    <div class="basic-tariff">
+			<h1>Базовий тариф</h1>
+			<ul>
+			    <li>Відкриті всі модулі</li>
+			    <li>Не має ніяких обмежень на штучний інтелект</li>
+				<li>Доступ до всіх навчальних матеріалів</li>
+			    <li>Можливість отримати сертифікат після завершення курсу</li>
+			    <li>Не можна обирати вибіркові дисципліни</li>
+			</ul>
+			<div>
+				<p>Ціна: 300 грн/міс</p>
+				<button class="tariff-btn" onclick="location.href='/#';">ОБРАТИ</button>
+			</div>
+	    </div>
+		<div class="premium-tariff">
+			<h1>Преміум тариф</h1>
+			<ul>
+			    <li>Відкриті всі модулі</li>
+			    <li>Не має ніяких обмежень на штучний інтелект</li>
+				<li>Доступ до всіх навчальних матеріалів</li>
+			    <li>Можливість отримати сертифікат після завершення курсу</li>
+			    <li>Можна вибирати вибіркові дисципліни</li>
+				<li>Пробний тест по НМТ кожну неділю</li>
+				<li>Інтерактивні заняття з викладачами</li>
+			</ul>
+			<div>
+				<p>Ціна: 600 грн/міс</p>
+				<button class="tariff-btn" onclick="location.href='/#';">ОБРАТИ</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+    <div class="footer-didactic">
+        <h1>DIDACTIC</h1>
+        <p>Штучний інтелект для підготовки до НМТ</p>
+    </div>
+    <div class="footer-contacts">
+        <p>didactic@gmail.com</p>
+        <p>+38 (097) 123 12 12</p>
+        <a href="#">Публічна оферта</a>
+    </div>
+</footer>
+<script src="script/App/App.js" type="module"></script>
+</body>
+</html>

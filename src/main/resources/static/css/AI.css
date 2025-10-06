@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+p, a, h1, h2, button, input{
+    font-family: "Montserrat", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.subject-selection-container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#FFE0A8 5%, #FFCF78 87%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subject-container{
+    display: flex;
+    column-gap: 64px;
+}
+.subject-container h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: #443020;
+    text-align: center;
+}
+.subject-container h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: #443020;
+    text-align: center;
+}
+
+.math, .ukrainian, .english, .history{
+    height: 561px;
+    width: 279px;
+    border-radius: 73px;
+    padding-top: 25px;
+    box-shadow: 0 4px 12.9px rgba(0, 0, 0, 10%);
+    transition: all 0.4s;
+    background-size: 95%;
+}
+.math:hover, .ukrainian:hover, .english:hover, .history:hover{
+    box-shadow: 0 4px 43px rgba(210, 115, 68, 54%);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.math-link, .ukrainian-link, .english-link, .history-link {
+    text-decoration: none
+}
+
+.math{
+    background-color: #FFBBBB;
+    background-image: url("../img/AI/archimed.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.ukrainian{
+    background-color: #FFEAA6;
+    background-image: url("../img/AI/lesya.png");
+	background-size: 430px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.english{
+    background-color: #E1FFB7;
+    background-image: url("../img/AI/shack.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+	background-size: 600px;
+}
+.history{
+    background-color: #FFFBF3;
+    background-image: url("../img/AI/bohdan.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+	background-size: 250px;
+}
+
+@media (max-width: 1330px){
+	.subject-container{
+	    transform: scale(0.9);
+	}
+}
+
+@media (max-width: 1230px){
+	.subject-container{
+	    transform: scale(0.8);
+	}
+}
+
+@media (max-width: 1090px){
+	.subject-container{
+	    transform: scale(0.7);
+	}
+}
+
+@media (max-width: 970px){
+	.subject-container{
+	    transform: scale(0.6);
+	}
+}
+@media (max-width: 810px){
+	.subject-container{
+	    transform: scale(0.5);
+	}
+}

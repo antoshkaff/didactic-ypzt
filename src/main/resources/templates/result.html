@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head xmlns:th="https://www.thymeleaf.org">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Didactic | Вступний тест математика</title>
+  <link rel="stylesheet" href="css/result.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+	<div class="container">
+		<div class="result-title">
+			<h1>Результати тестування</h1>
+			<h2>МАТЕМАТИКА</h2>
+		</div>
+
+  <div class="result-container">
+
+	<h1>Оцінка: <span th:text="${result} + ' з ' + ${ totalQuestions }">0</span></h1>
+	<h2>
+	    Відсоток правильних відповідей:
+	    <span th:if="${procent == 0.0}">0.00</span>
+	    <span th:unless="${procent == 0.0}" th:text="${#numbers.formatDecimal(procent, 0, 2)}"></span>%
+	</h2>
+    <h2>Всього питань: <span th:text="${totalQuestions}">0</span></h2>
+
+	  <div class="question-review-element">
+          <div th:each="res, iStat : ${questions}">
+              <div class="question-list">
+                  <h3 th:text="'Питання №: ' + ${iStat.count}"
+                      th:classappend="${res.question.userChoice != null and !res.question.userChoice.isEmpty() ? (res.resultCorrect ? 'correct' : 'incorrect') : 'not-chose'}"></h3>
+                  <p class="toggle">+</p>
+              </div>
+              <div class="question-info" hidden>
+                  <p class="question-text" th:text="${res.question.questionText}"></p>
+                  <div>
+                      <p class="question-text" th:text="'А: ' + ${res.question.optionA}"></p>
+                      <p class="question-text" th:text="'Б: ' + ${res.question.optionB}"></p>
+                      <p class="question-text" th:text="'В: ' + ${res.question.optionC}"></p>
+                      <p class="question-text" th:text="'Г: ' + ${res.question.optionD}"></p>
+                      <p class="question-text" th:text="'Д: ' + ${res.question.optionE}"></p>
+                  </div>
+                  <p th:text="'Ваша відповідь: ' + (${res.question.userChoice != null and !res.question.userChoice.isEmpty()} ? ${res.question.userChoice} : 'Не обрана')"></p>
+                  <p th:text="'Правильна відповідь: ' + ${res.question.correctAnswer}"></p>
+                  <h3>Чому?</h3>
+                  <p class="why">
+                      <span th:if="${res.question.explanation != null}" th:text="${res.question.explanation}"></span>
+                      <span th:unless="${res.question.explanation != null}">Пояснення для цього питання відсутнє.</span>
+                  </p>
+              </div>
+              <hr>
+          </div>
+	  </div>
+
+
+	  <button type="submit" class="btn-plan" onclick="location.href='/individual-plan';">ПЛАН НАВЧАННЯ</button>
+	  <button type="button" class="btn-plan" onclick="location.href='/score';">РЕЙТИНГ</button>
+    </div>
+  </div>
+
+  <footer>
+      <div class="footer-didactic">
+          <h1>DIDACTIC</h1>
+          <p>Штучний інтелект для підготовки до НМТ</p>
+      </div>
+      <div class="footer-contacts">
+          <p>didactic@gmail.com</p>
+          <p>+38 (097) 123 12 12</p>
+          <a href="#">Публічна оферта</a>
+      </div>
+  </footer>
+  
+  <script src="script/result.js"></script>
+	<script src="script/App/App.js" type="module"></script>
+</body>
+</html>

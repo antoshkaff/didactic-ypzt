@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Didactic | Рєестрація</title>
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<div class="container">
+    <div class="registration-form">
+        <form th:action="@{/register}" th:object="${user}" method="post">
+            <h1>Рєестрація</h1>
+            <div class="input-login">
+                <input type="text" placeholder="Логін" id="signup-login" th:field="*{name}">
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-password">
+                <input type="password" placeholder="Пароль" id="signup-password" th:field="*{password}">
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="input-password-again">
+                <input type="password" placeholder="Повторіть пароль" id="signup-password-again">
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="input-email">
+                <input type="email" placeholder="Електронна пошта" id="signup-email" th:field="*{email}">
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <p class="error-message" th:if="${error}" th:text="${error}" style="display: block; color: red;"></p>
+            <button type="submit" class="btn-registration" id="submit-btn">Зареєструватися </button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-didactic">
+        <h1>DIDACTIC</h1>
+        <p>Штучний інтелект для підготовки до НМТ</p>
+    </div>
+    <div class="footer-contacts">
+        <p>didactic@gmail.com</p>
+        <p>+38 (097) 123 12 12</p>
+        <a href="#">Публічна оферта</a>
+    </div>
+</footer>
+
+<script src="script/registration.js"></script>
+</body>
+</html>

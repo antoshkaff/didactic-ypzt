@@ -1,0 +1,79 @@
+
+table, td, th {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    padding: 10px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
+	margin: 20px 0 20px 0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+p, a, h1, h2, h3, button, input{
+    font-family: "Montserrat", sans-serif;
+}
+html{
+	background: linear-gradient(#FFE0A8 5%, #FFCF78 87%);
+}
+
+.score-title {
+	margin: 30px;
+}
+
+.score-title h1{
+	color: #4D4747;
+	font-weight: 700;
+	margin-top:20px;
+	font-size: 32px;
+	text-align: center;
+}
+
+.score-container{
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	max-width: 636px;
+	background-color: #fff;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 25%);
+	border-radius: 20px;
+	padding: 40px;
+	color: #4D4747;
+	margin: 10px 0px;
+}
+.score-container h1{
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 17px;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.btn-plan{
+    min-width: 200px;
+	width: 15%;
+    height: 39px;
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(48deg, #FDB638, #FFCF75);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 15%);
+    transition: all 0.3s;
+    margin-top: 30px;
+	align-self: center;
+}
+.btn-plan:hover{
+    box-shadow: 0 3px 10px #FDB638;
+	cursor: pointer;	
+}
